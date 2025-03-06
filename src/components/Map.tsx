@@ -26,7 +26,7 @@ function MapBoundsHandler() {
 
   useEffect(() => {
     map.setMaxBounds(PORTUGAL_BOUNDS);
-    map.setMinZoom(6);
+    map.setMinZoom(8);
     
     const handleDrag = () => {
       map.panInsideBounds(PORTUGAL_BOUNDS, { animate: false });
