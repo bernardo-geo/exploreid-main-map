@@ -162,6 +162,11 @@ function Map() {
       updatedCategories.add(newPoi.category_id); // Adiciona a categoria automaticamente
       return updatedCategories;
     });
+
+     // Se a Moeda ID estiver ativada, mas o POI não tem Moeda ID, desativamos o filtro automaticamente
+    if (showMoedaId && !newPoi.has_moeda_id) {
+      setShowMoedaId(false);
+    }
     
     if (mapRef.current) {
       const map = mapRef.current;
@@ -173,7 +178,7 @@ function Map() {
         easeLinearity: 0.3
       });
     }
-  }, []);
+  }, [showMoedaId]);
 
   const handleMoedaIdToggle = useCallback((show: boolean) => {
     setShowMoedaId(show);
