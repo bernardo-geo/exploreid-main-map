@@ -145,7 +145,7 @@ function Map() {
     if (mapRef.current) {
       const map = mapRef.current;
       //const currentZoom = map.getZoom();
-      const targetZoom = /*currentZoom < 14 ? */ 16 /*: currentZoom;*/
+      const targetZoom = /*currentZoom < 14 ? */ 18 /*: currentZoom;*/
       
       map.flyTo([poi.latitude, poi.longitude], targetZoom, {
         duration: 0.8,
@@ -171,7 +171,7 @@ function Map() {
     if (mapRef.current) {
       const map = mapRef.current;
       //const currentZoom = map.getZoom();
-      const targetZoom = /*currentZoom < 14 ? */16 //: currentZoom;
+      const targetZoom = /*currentZoom < 14 ? */18 //: currentZoom;
       
       map.flyTo([newPoi.latitude, newPoi.longitude], targetZoom, {
         duration: 0.8,
