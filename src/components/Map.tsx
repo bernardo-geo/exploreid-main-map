@@ -144,11 +144,11 @@ function Map() {
     
     if (mapRef.current) {
       const map = mapRef.current;
-      const currentZoom = map.getZoom();
-      const targetZoom = currentZoom < 14 ? 14 : currentZoom;
+     //const currentZoom = map.getZoom();
+      const targetZoom = /*currentZoom < 14 ? */ 16 /*: currentZoom;*/  
       
       map.flyTo([poi.latitude, poi.longitude], targetZoom, {
-        duration: 0.5,
+        duration: 0.8,
         easeLinearity: 0.25
       });
     }
@@ -159,11 +159,11 @@ function Map() {
     
     if (mapRef.current) {
       const map = mapRef.current;
-      const currentZoom = map.getZoom();
-      const targetZoom = currentZoom < 14 ? 14 : currentZoom;
+      //const currentZoom = map.getZoom();
+      const targetZoom = /*currentZoom < 14 ? */ 16 /*: currentZoom;*/
       
       map.flyTo([newPoi.latitude, newPoi.longitude], targetZoom, {
-        duration: 0.5,
+        duration: 0.8,
         easeLinearity: 0.25
       });
     }
