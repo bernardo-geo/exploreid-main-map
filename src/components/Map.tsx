@@ -255,12 +255,18 @@ function Map() {
             {isSidebarOpen && (
               <div className="px-4 py-0 border-t border-gray-100 overflow-y-auto h-[calc(100%-50px)]">
                 {selectedPOI ? (
+                <>
+                   {/* Adiciona o título no topo da caixa no mobile */}
+                   <h3 className="font-bold text-lg text-gray-900 text-center p-1">
+                     {selectedPOI.name}
+                   </h3>
                   <POIDetails
                     poi={selectedPOI}
                     onClose={() => setSelectedPOI(null)}
                     iconUrl={categories.find(cat => cat.id === selectedPOI.category_id)?.icon_url || ''}
                     onPOIChange={handlePOIChange}
                   />
+                  </>
                 ) : (
                   <>
                     <button
