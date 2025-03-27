@@ -2,7 +2,7 @@ import { POIType } from './types';
 
 export const SHARE_MESSAGES: Record<POIType, (name: string) => string> = {
   'ponto-interesse': (name: string) => 
-    `Próxima paragem: ${name}! Vem explorar este fantástico ponto de interesse, acredita que vale a pena! Obtém as direções através do mapa ou da página. Sabe mais em `,
+    `Próxima paragem: ${name}! Vem explorar este fantástico ponto de interesse ou embaixador, acredita que vale a pena! Obtém as direções através do mapa ou da página. Sabe mais em `,
   'embaixador': (name: string) => 
     `Próxima paragem: ${name}! Vem conhecer este embaixador e vive uma experiência única! Obtém as direções através do mapa ou da página. Sabe mais em `
 };
